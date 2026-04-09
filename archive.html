@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect X | Legacy Vault</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #ffffff; overflow-x: hidden; }
+        .hero-aura { position: absolute; top: 0%; left: 50%; transform: translateX(-50%); width: 100%; height: 600px; background: radial-gradient(circle, rgba(59, 142, 208, 0.08) 0%, rgba(13, 17, 23, 0) 70%); z-index: -1; }
+        .app-card { background-color: #181818; border: 1px solid #252525; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .app-card:hover { border-color: rgba(59, 142, 208, 0.3); transform: translateY(-2px); }
+        .glass-nav { background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-reveal { animation: fadeInUp 0.6s ease forwards; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-aura"></div>
+
+    <nav class="glass-nav fixed top-0 w-full z-[100]">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="font-black text-white text-lg">X</span>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter uppercase">Architect <span class="text-blue-500">X</span></span>
+            </a>
+            <a href="index.html" class="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-white transition">← Back to Engine</a>
+        </div>
+    </nav>
+
+    <main class="pt-48 pb-32 px-6 max-w-5xl mx-auto">
+        <header class="mb-20 animate-reveal">
+            <h1 class="text-6xl font-black tracking-tighter mb-6">Legacy <span class="text-blue-500 text-7xl">Vault</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">Access historical binaries and documentation for the Architect Suite lineage. All builds are verified for integrity before archival.</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-6 animate-reveal" style="animation-delay: 0.2s;">
+            
+            <div class="app-card p-10 rounded-[40px] border-dashed border-2 flex flex-col items-center justify-center text-center opacity-60">
+                <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b8ed0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <h4 class="text-lg font-bold mb-1 uppercase tracking-widest">Build v4.6.0 Stable</h4>
+                <p class="text-xs text-gray-600 mb-6 uppercase tracking-widest">Awaiting Verification</p>
+                <div class="w-full h-px bg-white/5 mb-6"></div>
+                <p class="text-xs text-gray-500 italic">Legacy modules including standard Registry Optimization and Storage Cleanup. Will be released following the v4.7.2 public deployment.</p>
+            </div>
+
+            <div class="app-card p-10 rounded-[40px] border-white/5 flex flex-col items-center justify-center text-center opacity-40">
+                <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <h4 class="text-lg font-bold mb-1 uppercase tracking-widest">v4.5.2 Alpha</h4>
+                <p class="text-xs text-gray-600 mb-6 uppercase tracking-widest text-red-900/50">Restricted Build</p>
+                <div class="w-full h-px bg-white/5 mb-6"></div>
+                <p class="text-xs text-gray-500 italic">Early kernel prototype. Documentation only. Binaries for this version have been decommissioned for security compliance.</p>
+            </div>
+
+        </div>
+
+        <section class="mt-32 p-12 bg-blue-600/5 rounded-[40px] border border-blue-500/10 animate-reveal" style="animation-delay: 0.4s;">
+            <h3 class="text-2xl font-black mb-8 tracking-tight italic uppercase text-blue-500">Vault Integrity Notice</h3>
+            <div class="grid md:grid-cols-2 gap-12 text-sm text-gray-500 leading-relaxed">
+                <p>Architect X maintains a strict archival policy. Legacy builds are preserved as-is. Support for legacy versions is provided exclusively through the community Discord. We recommend all users remain on the <span class="text-white font-bold">Stable v4.7.2 Branch</span> for maximum security.</p>
+                <p>Downloading legacy binaries requires a verified Architect ID. If you require access for system forensic or development purposes, please reach out to the core engineering team via the support portal.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/5 opacity-60">
+        <p class="text-[10px] text-gray-600 font-black uppercase tracking-[0.5em]">Architect X Legacy Vault</p>
+    </footer>
+
+</body>
+</html>
